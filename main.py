@@ -100,16 +100,3 @@ cluster_plot(optimal_k, clusters, X_pca, fname="outputs/clusters.png")
 
 # Visualize the clusters
 cluster_bar_charts(cluster_top_packages, optimal_k, fname="outputs/bar")
-
-# Reload module
-import importlib
-import functions.visualize as viz
-importlib.reload(viz)
-from functions.visualize import cluster_plot, cluster_bar_charts
-
-
-# Reload module
-import importlib
-import functions.cluster as cluster
-importlib.reload(cluster)
-from functions.cluster import elbow_method 
