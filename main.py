@@ -24,6 +24,10 @@ raw = scrape_github(token = token, max_repos=4000, min_stars=100)
 # Extract and deduplicate dependencies from the scraped repositories
 repos = extract_dependencies(raw)
 
+# You can avoid re-running the scrape and extract functions by loading the pickled objects
+with open("data/repos.pkl", "rb") as infile:
+    repos = pickle.load(infile)
+
 # Check results
 for repo_name, deps in repos.items():
     print(f"{repo_name}: {deps}")
