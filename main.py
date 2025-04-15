@@ -97,7 +97,7 @@ for label, repo_list in cluster_repo_map.items():
     cluster_top_packages[label] = top_10 # Save result to dictionary
 
 # Plot the top packages in each cluster
-cluster_plot(optimal_k, clusters, X_pca, fname="outputs/clusters.png")
+cluster_plot(optimal_k, clusters, X_pca, fname="outputs/cluster_plot.png")
 
 # Visualize the clusters
 cluster_bar_charts(cluster_top_packages, optimal_k, fname="outputs/bar")
